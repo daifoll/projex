@@ -25,6 +25,7 @@
             align-items: center;
             flex-basis: 100%;
             color: $primalColor;
+            @include primalFontMedium;
         }
     }
 
@@ -35,6 +36,7 @@
         align-items: center;
         color: $primalSecondColor;
         background-color: $primalBTNcolor;
+        @include primalFontMediumBtn;
 
     }
 }

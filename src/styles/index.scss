@@ -33,3 +33,10 @@ a:visited {
 ul{
     list-style: none;
 }
+
+/* ========== ОБЩИЕ СТИЛИ ========== */
+
+body{
+    @include primalFontRegular;
+    
+}

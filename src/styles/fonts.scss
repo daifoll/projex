@@ -1,8 +1,29 @@
+/* Galano Grotesque - REGULAR */
 @font-face {
     font-family: 'GalanoGrotesque';
     src:
-        url('../fonts/Galano Grotesque/GalanoGrotesque-Black.woff2') format('woff2'),
-        url('../fonts/Galano Grotesque/GalanoGrotesque-Black.woff') format('woff');
-    font-weight: 900;
+        url('../fonts/Galano Grotesque/GalanoGrotesqueAlt-Regular.woff2') format('woff2'),
+        url('../fonts/Galano Grotesque/GalanoGrotesqueAlt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Galano Grotesque - MEDUIM */
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src:
+        url('../fonts/Galano Grotesque/GalanoGrotesqueAlt-Medium.woff2') format('woff2'),
+        url('../fonts/Galano Grotesque/GalanoGrotesqueAlt-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Galano Grotesque - BOLD */
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src:
+        url('../fonts/Galano Grotesque/GalanoGrotesqueAlt-Bold.woff2') format('woff2'),
+        url('../fonts/Galano Grotesque/GalanoGrotesqueAlt-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
 }
