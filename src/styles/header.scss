@@ -27,6 +27,10 @@
             color: $primalColor;
             @include primalFontMedium;
         }
+
+        .nav-list__item:hover{
+            color: #EC1C24;
+        }
     }
 
     .btn-header{

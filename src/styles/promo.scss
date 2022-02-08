@@ -4,7 +4,7 @@
     color: $primalSecondColor;
     background: url('../images/promo/bg-image.png') no-repeat center;
     background-size: cover;
-    padding-top: 166px;
+    // padding-top: 166px;
     padding-bottom: 149px;
 
     &::after {
@@ -31,10 +31,11 @@
     }
 
     &__header {
+        margin-top: 166px;
         position: relative;
         text-align: center;
         @include primalFontBold;
-        font-size: initial;
+        font-size: 52px;
         max-width: 600px;
         line-height: 81px;
             &::before{
@@ -59,7 +60,7 @@
     }
 
     &__btn{
-        margin: 97px 0;
+        margin-top: 80px;
         background: $primalBTNcolor;
         display: flex;
         justify-content: center;
