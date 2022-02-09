@@ -6,6 +6,7 @@
 @import 'fonts';
 @import 'header';
 @import 'promo';
+@import 'footer';
 
 
 
@@ -38,5 +39,5 @@ ul{
 /* ========== ОБЩИЕ СТИЛИ ========== */
 body{
     @include primalFontRegular;
-    
+    font-size: $primalFontSize;
 }
