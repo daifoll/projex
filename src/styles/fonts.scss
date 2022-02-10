@@ -28,6 +28,15 @@
     font-style: normal;
 }
 
+/* Galano Grotesque - SEMI BOLD */
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src:
+        url('../fonts/Galano Grotesque/GalanoGrotesque-SemiBold.woff2') format('woff2'),
+        url('../fonts/Galano Grotesque/GalanoGrotesque-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
 /* Galano Grotesque - BOLD */
 @font-face {
     font-family: 'GalanoGrotesque';

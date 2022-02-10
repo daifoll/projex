@@ -20,6 +20,11 @@
     font-weight: 500;
 }
 
+/* Galano Grotesque - SEMI BOLD */
+@mixin primalFontSemiBold {
+    font-family: 'GalanoGrotesque', sans-serif;
+    font-weight: 600;
+}
 /* Galano Grotesque - BOLD */
 @mixin primalFontBold {
     font-family: 'GalanoGrotesque', sans-serif;

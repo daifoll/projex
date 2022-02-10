@@ -1,0 +1,33 @@
+.provide{
+    max-width: 100%;
+    padding-top: 116px;
+    padding-bottom: 81px;
+        &-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &-header{
+            &__item{
+                @include primalFontSemiBold;
+                font-size: $primalFontSizeHeader;
+                color: $primalColor;
+            }
+        }
+
+        &-slider{
+            .slider-provide{
+                display: flex;
+                &__description{
+                    font-size: $primalFontSizeParagraph;
+                    color: $primalSecondColor;
+                    background: $primalSecondBGColor;
+                }
+            }
+        }
+
+        &-description{
+            display: flex;
+        }
+}
