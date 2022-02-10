@@ -17,12 +17,60 @@
         }
 
         &-slider{
+            margin-top: 35px;
             .slider-provide{
+                position: relative;
                 display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+                justify-content: space-between;
+                max-width: 896px;
                 &__description{
                     font-size: $primalFontSizeParagraph;
                     color: $primalSecondColor;
                     background: $primalSecondBGColor;
+                    flex-basis: 591px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 57px 51px;
+                    line-height: 40px;
+                }
+
+                &__header{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include primalFontMedium;
+                    font-size: $primalFontSizeHeaderProvide;
+                    color: $primalSecondColor;
+                    background: $primalBTNcolor;
+                    flex-basis: 286px;
+                }
+
+                &__btn{
+                    position: absolute;
+                    left: calc(100% + 79px);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: transparent;
+                    border: 0;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    width: 38px;
+                    height: 38px;
+                    cursor: pointer;
+                        &:after{
+                            position: absolute;
+                            content: '';
+                            top: 50%;
+                            left: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                            width: 17px;
+                            height: 17px;
+                            background: url('../images/provide/provide-btn.svg') no-repeat;
+
+                        } 
                 }
             }
         }
