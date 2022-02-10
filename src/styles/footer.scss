@@ -29,12 +29,18 @@
         }
 
         &__contacts{
+            position: relative;
             display: flex;
             justify-content: space-between;
             margin-top: 40px;
             max-width: 250px;
             font-size: $primalFontSizeSMALL;
+                &>a:hover{
+                    border-bottom: 1px solid $primalBTNcolor;
+                    padding-bottom: 5px;
+                }
         }
+
     }
 
 
