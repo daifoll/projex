@@ -56,10 +56,10 @@
 
     &-right {
         padding-top: 41px;
-        margin-left: 199px;
+        flex-basis: 300px;
+        margin-left: calc(35% - 199px);
         display: flex;
         flex-wrap: wrap;
-        flex-basis: 300px;
         justify-content: space-between;
 
         &__item {
