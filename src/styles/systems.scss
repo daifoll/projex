@@ -37,28 +37,42 @@
         .cards-systems{
             margin-top: 34px;
             display: flex;
+            flex-wrap: wrap;
             max-width: 100%;
             justify-content: space-between;
-                &__item{
-                    flex-basis: calc(20% - 7.5px);
-                    background: $systemsCardsBGColor;
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    padding: 31px 16px;
-                        &>img{
-                            width: 47px;
-                        }
-                }
-
                 &__header{
-                    margin-top: 24px;
                     @include primalFontSemiBold;
                     color: $primalColor;
                     text-transform: uppercase;
                     line-height: 25px;
+                }
+
+                .system-card{
+                    padding: 16px 16px;
+                    display: flex;
+                    background: $systemsCardsBGColor;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: space-between;
+                    flex-basis: calc(20% - 7.5px);
+                    height: 184px;
+                    &__img{
+                        flex-basis: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                            &>img{
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                    }
+                    &__header{
+                        flex-basis: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
         }
 }
