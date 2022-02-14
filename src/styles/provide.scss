@@ -33,7 +33,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 57px 51px;
+                    padding: 57px 54px;
                     line-height: 40px;
                 }
 
@@ -76,6 +76,36 @@
         }
 
         &-description{
+            padding-top: 96px;
             display: flex;
+            max-width: 929px;
+            justify-content: space-between;
+                &__item{
+                    display: flex;
+                    flex-basis: 283px;
+                    flex-direction: column;
+                }
+
+                .description-provide{
+                    &>*:not(:first-child){
+                        margin-top: 24px;
+                    }
+                    &__header{
+                        color: $primalColor;
+                        @include primalFontSemiBold;
+                        font-size: $provideHeaderFontSize;
+                    }
+
+                    &__depiction{
+                        color: $primalColor;
+                    }
+
+                    &__link{
+                        color: $primalBTNcolor;
+                        @include primalFontSemiBold;
+                        font-size: $provideLinkFontSize;
+                        text-transform: uppercase;
+                    }
+                }   
         }
 }
