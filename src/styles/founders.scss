@@ -1,0 +1,61 @@
+.founders{
+    max-width: 100%;
+    color: $primalSecondColor;
+    background: $primalSecondBGColor;
+    padding: 50px 0 98px 0;
+        &-container{
+            max-width: 100%;
+        }
+
+        .founders-header{
+            display: flex;
+            justify-content: center;
+            &__item{
+                @include primalFontSemiBold;
+                font-size: $foundersHeaderFontSize;
+                line-height: 65px;
+            }
+        }
+
+        .founders-people{
+            display: flex;
+            justify-content: space-between;
+                &__card{
+                    margin-top: 55px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    flex-basis: 434px;
+                    background: $foundersCardsBGColor;
+                    color: $primalColor;
+                }
+                .founders-card{
+                        &__img{
+                            max-width: 221px;
+                                &>img{
+                                    width: 100%;
+                                }
+                        }
+                        &__content{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        .content-founders{
+                            &__header{
+                                @include primalFontSemiBold;
+                                font-size: $foundersCardNameFontSize;
+                                line-height: 38px;
+                            }
+
+                            &__description{
+                                font-size: $foundersCardDescriptionFontSize;
+                                line-height: 21px;
+                            }
+                        }
+                        &__buttons{
+
+                        }
+                }
+        }
+}
