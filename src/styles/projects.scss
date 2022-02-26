@@ -1,0 +1,58 @@
+.projects{
+    max-width: 100%;
+        &-container{
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-explore{
+            padding: 52px 0 52px 150px;
+                &__header{
+                    @include primalFontSemiBold;
+                    font-size: $projectsHeaderFontSize;
+                }
+        }
+
+        &-cards{
+            display: flex;
+            justify-content: space-between;
+            color: $primalSecondColor;
+                &__item{
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 25%;
+                    padding: 32px 24px 21px 49px;
+                    height: 465px;
+                    // @include primalFontLight;
+                    
+                }
+                .card-projects{
+                    &__header{
+                        @include primalFontSemiBold;
+                        font-size: $projectsCardHeaderFontSize;
+                    }
+                }
+
+                .projects-security{
+                    background: url('../images/projects/security.png') no-repeat;
+                    background-size: cover;
+                }
+
+                .projects-mubadala{
+                    background: url('../images/projects/mubadala.png') no-repeat;
+                    background-size: cover;
+                }
+
+                .projects-doha{
+                    background: url('../images/projects/doha.png') no-repeat;
+                    background-size: cover;
+                }  
+                
+                .projects-ministry{
+                    background: url('../images/projects/ministry.png') no-repeat;
+                    background-size: cover;
+                }
+
+        }
+}
