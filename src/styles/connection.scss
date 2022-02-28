@@ -1,0 +1,14 @@
+.connection{
+    max-width: 100%;
+        &-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .request{
+            flex-basis: 409px;
+        }
+
+        .promises{
+            flex-basis: 539px;
+        }
+}
