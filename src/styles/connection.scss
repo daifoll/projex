@@ -1,14 +1,68 @@
-.connection{
+.connection {
     max-width: 100%;
-        &-container{
-            display: flex;
-            justify-content: space-between;
-        }
-        .request{
-            flex-basis: 409px;
-        }
+    padding: 127px 0 0 0;
 
-        .promises{
-            flex-basis: 539px;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        @include primalFontSemiBold;
+        font-size: $connectionCardHeaderFontSize;
+        text-align: center;
+        line-height: 65px;
+    }
+
+    .request {
+        flex-basis: 409px;
+        font-size: $connectionFormItemFontSize;
+        &__content{
+            margin-top: 54px;
+                .request__form {
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+        }   
+        .form-request{
+            &__item{
+                padding: 19px 0 19px 13px;
+                border: 1px solid $connectionBorderColor;
+                text-transform: uppercase;
+                @include primalFontLight;
+                
+                
+                &:not(:last-child){
+                    margin-bottom: 24px;
+                }
+            }
+            
+            &__select{
+
+            }
+
+            &__message{
+                min-height: 102px;
+            }
+
+            &__submit{
+                padding: 14px 34px;
+                background-color: $primalBTNcolor;
+                justify-self: flex-start;
+                align-self: flex-start;
+                color: $primalSecondColor;
+                text-transform: none;
+                line-height: 30px;
+                @include primalFontSemiBold;
+                font-size: $connectionFormSubmitFontSize;
+                cursor: pointer;
+            }
+            
         }
+    }
+
+    .promises {
+        flex-basis: 539px;
+    }
 }

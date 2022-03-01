@@ -46,4 +46,5 @@ ul{
 body{
     @include primalFontRegular;
     font-size: $primalFontSize;
+    color: $primalColor;
 }
