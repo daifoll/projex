@@ -32,6 +32,17 @@
             @include primalFontSemiBold;
             font-size: $systemsHeaderFontSize;
             line-height: 56px;
+            
+            @media screen and (max-width: 940px){
+                font-size: 30px;
+            }
+
+            @media screen and (max-width: 768px){
+                font-size: 29px;
+                width: 100%;
+                border: 1px solid black;
+            }
+            
         }
 
         .cards-systems{
@@ -40,6 +51,9 @@
             flex-wrap: wrap;
             max-width: 100%;
             justify-content: space-between;
+            @media screen and (max-width: 1400px){
+                flex-direction: column;
+            }
                 &__header{
                     @include primalFontSemiBold;
                     color: $primalColor;
@@ -57,6 +71,10 @@
                     justify-content: space-between;
                     flex-basis: calc(20% - 7.5px);
                     height: 184px;
+                    @media screen and (max-width: 1400px){
+                        margin-top: 20px;
+    
+                    }
                     &__img{
                         flex-basis: 50%;
                         display: flex;
