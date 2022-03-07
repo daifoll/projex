@@ -21,6 +21,11 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
+                align-items: center;
+                
+            }
                 &__card{
                     margin-top: 55px;
                     display: flex;
@@ -31,6 +36,10 @@
                     color: $primalColor;
                     position: relative;
                     padding-bottom: 46px;
+                    @media screen and (max-width: 992px) {
+                        padding: 46px 20px;
+                        margin-top: 170px;
+                    }
                 }
                 .founders-card{
                         &__img{

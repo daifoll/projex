@@ -4,8 +4,10 @@
     color: $primalSecondColor;
     background: url('../images/promo/bg-image.png') no-repeat center;
     background-size: cover;
-    // padding-top: 166px;
     padding-bottom: 149px;
+    
+    
+
 
     &::after {
         content: '';
