@@ -5,6 +5,10 @@
     &-container {
         display: flex;
         justify-content: space-between;
+        
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
     }
 
     &__header {
@@ -66,6 +70,10 @@
 
     .promises {
         flex-basis: 539px;
+        
+        @media screen and (max-width: 992px) {
+            margin-top: 100px;
+        }
             .accordion-promises{
                 margin-top: 54px;
                 max-width: 100%;

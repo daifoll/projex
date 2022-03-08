@@ -47,4 +47,5 @@ body{
     @include primalFontRegular;
     font-size: $primalFontSize;
     color: $primalColor;
+    overflow-x: hidden;
 }

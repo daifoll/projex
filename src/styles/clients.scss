@@ -32,6 +32,34 @@
                             // margin-left: 10px;
                             height: 230px;
                             background: $primalBGColor;
+
+                            @media screen and (max-width: 992px) {
+                                flex-basis: 130px;
+                            }
+
+                            @media screen and (max-width: 940px) {
+                                flex-basis: 110px;
+                            }
+                            
+                            @media screen and (max-width: 800px) {
+                                flex-basis: 100px;
+                            }
+                            
+                            &:nth-child(1n+5){
+                                @media screen and (max-width: 768px) {
+                                    display: none;
+                                }
+                            }
+
+                            @media screen and (max-width: 768px) {
+                                flex-basis: 24%;
+                            }
+                            
+                            &__img{
+                                @media screen and (max-width: 992px) {
+                                    max-width: 80%;
+                                }
+                            }
                         }
                 }
         }

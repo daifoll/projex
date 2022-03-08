@@ -31,6 +31,10 @@
         .nav-list__item:hover{
             color: #EC1C24;
         }
+
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
     }
 
     .btn-header{
@@ -42,5 +46,8 @@
         background-color: $primalBTNcolor;
         @include primalFontMediumBtn;
 
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
     }
 }

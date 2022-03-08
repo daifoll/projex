@@ -10,6 +10,10 @@
     &-explore {
         padding: 52px 0 52px 150px;
 
+        @media screen and (max-width: 992px) {
+            padding: 52px 0 52px 49px;
+        }
+
         &__header {
             @include primalFontSemiBold;
             font-size: $projectsHeaderFontSize;
@@ -20,6 +24,10 @@
         display: flex;
         justify-content: space-between;
         color: $primalSecondColor;
+        
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
 
         &__item {
             position: relative;
