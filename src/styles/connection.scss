@@ -85,7 +85,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-
+                    
                     &:not(:first-child){
                         margin-top: 32px;
                     }
@@ -100,16 +100,18 @@
                         max-width: 486px;
                         line-height: 25px;
                         display: none;
+                        transition: display 0.3s;
+                            &_active{
+                                display: block;
+                            }
                     }
 
-                    &::after{
-                        content: '+';
+                    &__btn {
                         position: absolute;
-                        // display: flex;
-                        // justify-content: center;
-                        // align-items: center;
-                        top: 30px;
-                        // transform: translateY(-50%);
+                        display: flex;
+                        justify-content: center;
+                        top: 50%;
+                        transform: translateY(-50%);
                         right: 27px;
                         width: 34px;
                         height: 34px;
@@ -119,6 +121,10 @@
                         @include primalFontSemiBold;
                         font-size: 20px;
                         text-align: center;
+                        background: transparent;
+                            &_active{
+                                top: 40px;
+                            }
                     }
                 }
             }
