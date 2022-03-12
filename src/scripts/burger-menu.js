@@ -33,11 +33,7 @@ function navigationLoad(event){
         aElement.target = aMain.target;
         aElement.textContent = li.textContent;
         liElement.append(aElement);
-        
-        // console.log(aMain.className);
-    }
-    
-    
+    } 
 
 }
 

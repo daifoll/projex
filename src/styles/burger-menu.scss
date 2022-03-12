@@ -17,6 +17,11 @@
         display: flex;
     }
 
+    @media screen and (max-width: 768px){
+        width: 245px;
+    }
+
+
 
 
     .nav-btn {
@@ -28,6 +33,10 @@
         border: 0;
         background: #000;
         cursor: pointer;
+
+        @media screen and (max-width: 768px){
+            width: 45px;
+        }
 
         &__item {
             position: absolute;

@@ -69,7 +69,7 @@
                     @media screen and (max-width: 410px) {
                         font-size: 15px;
                         padding: 0 24px;
-                     }
+                    }
 
                 }
 
@@ -153,16 +153,32 @@
             display: flex;
             max-width: 929px;
             justify-content: space-between;
+            
+            @media screen and (max-width: 576px) {
+                max-width: 100%;
+                padding-top: 81px;
+                flex-direction: column;  
+            }
                 &__item{
                     display: flex;
                     flex-basis: 283px;
                     flex-direction: column;
+
+                    @media screen and (max-width: 576px) {
+                        flex-basis: auto;
+                        &:not(:first-child){
+                            margin-top: 70px;
+                        }
+                        
+                    }
+                    
                 }
 
                 .description-provide{
                     &>*:not(:first-child){
                         margin-top: 24px;
                     }
+
                     &__header{
                         color: $primalColor;
                         @include primalFontSemiBold;
