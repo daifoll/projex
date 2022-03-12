@@ -71,6 +71,13 @@ body {
     right: -200px;
     width: 250px;
     transition: right 0.3s ease;
+    display: none;
+
+    @media screen and (max-width: 991px){
+        display: flex;
+    }
+
+
 
     .nav-btn {
         position: absolute;
@@ -111,6 +118,7 @@ body {
                 background-color: white;
                 transition: all 0.3s;
             }
+            
         }
 
     }
@@ -123,6 +131,9 @@ body {
         &__item {
             font-size: 30px;
             text-transform: uppercase;
+                &:not(:first-child){
+                    margin-top: 20px;
+                }
 
             &:hover {
                 text-decoration: underline;
@@ -130,8 +141,21 @@ body {
             }
         }
     }
+    .nav-btn__active{
+        background-color: rgba(0, 0, 0, 0);
+        &:before{
+            top: 0;
+            transform: rotate(45deg);
+        }
+    
+        &:after{
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &-active {
+        right: 0;
+    }
 }
 
-.navigation-active {
-    right: 0;
-}
