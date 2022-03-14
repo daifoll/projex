@@ -6,6 +6,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
         }
         
         &-header{
@@ -18,14 +19,23 @@
 
         &-slider{
             margin-top: 35px;
+            max-width: 896px;
+            overflow: hidden;
+            
+            &__line{
+                display: flex;
+                width: 0;
+                position: relative;
+                left: 0;
+                transition: all 0.3s;
+            }
             .slider-provide{
                 position: relative;
                 display: flex;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
                 align-items: stretch;
                 justify-content: space-between;
-                max-width: 896px;
-
+                width: 896px;
                 @media screen and (max-width: 1150px) {
                     max-width: 750px;
                 }
@@ -37,7 +47,6 @@
                 @media screen and (max-width: 900px) {
                     flex-direction: column;
                 }
-
                 &__description{
                     font-size: $primalFontSizeParagraph;
                     color: $primalSecondColor;
@@ -102,9 +111,8 @@
 
                 &__btn{
                     position: absolute;
-                    left: calc(100% + 79px);
-                    top: 50%;
-                    transform: translateY(-50%);
+                    left: 90%;
+                    top: 33%;
                     background: transparent;
                     border: 0;
                     border: 1px solid black;

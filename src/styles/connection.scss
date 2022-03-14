@@ -100,9 +100,10 @@
                         max-width: 486px;
                         line-height: 25px;
                         display: none;
-                        transition: display 0.3s;
+                        transition: opacity 0.3s;
                             &_active{
                                 display: block;
+                                
                             }
                     }
 
