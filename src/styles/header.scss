@@ -28,13 +28,12 @@
             @include primalFontMedium;
         }
 
-        .nav-list__item:hover{
-            color: #EC1C24;
-        }
-
         @media screen and (max-width: 992px) {
             display: none;
         }
+    }
+    .nav-list__link:hover{
+        color: #EC1C24;
     }
 
     .btn-header{
