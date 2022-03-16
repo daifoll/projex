@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'grid';
 @import 'normalize.css';
+@import 'to-top';
 @import 'burger-menu';
 @import 'fonts';
 @import 'header';
@@ -54,6 +55,7 @@ ul {
 
 /* ========== ОБЩИЕ СТИЛИ ========== */
 body {
+    position: relative;
     @include primalFontRegular;
     font-size: $primalFontSize;
     color: $primalColor;

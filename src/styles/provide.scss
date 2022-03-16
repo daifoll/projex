@@ -21,7 +21,17 @@
             margin-top: 35px;
             max-width: 896px;
             overflow: hidden;
-            
+            @media screen and (max-width: 1150px) {
+                max-width: 750px;
+            }
+
+            @media screen and (max-width: 1020px) {
+                max-width: 720px;
+            }
+
+            @media screen and (max-width: 900px) {
+                flex-direction: column;
+            }
             &__line{
                 display: flex;
                 width: 0;
@@ -32,21 +42,10 @@
             .slider-provide{
                 position: relative;
                 display: flex;
-                // flex-wrap: wrap;
                 align-items: stretch;
                 justify-content: space-between;
                 width: 896px;
-                @media screen and (max-width: 1150px) {
-                    max-width: 750px;
-                }
-
-                @media screen and (max-width: 1020px) {
-                    max-width: 720px;
-                }
-
-                @media screen and (max-width: 900px) {
-                    flex-direction: column;
-                }
+    
                 &__description{
                     font-size: $primalFontSizeParagraph;
                     color: $primalSecondColor;
