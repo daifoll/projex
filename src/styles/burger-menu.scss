@@ -6,7 +6,7 @@
     padding: 10px;
     align-items: center;
     height: 100vh;
-    background-color: rgba($burgerMenuBGColor, 0.5);
+    background-color: transparent;
     color: $burgerMenuColor;
     right: -200px;
     width: 250px;
@@ -102,5 +102,6 @@
 
     &-active {
         right: 0;
+        background-color: rgba($burgerMenuBGColor, 0.8);
     }
 }
