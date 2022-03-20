@@ -33,6 +33,7 @@ window.addEventListener('resize', ()=>{
 sliderBtn.addEventListener('click', rightBtn);
 
 
+
 // Функции
 function rightBtn(event){
     offSet += -sliderBlockWidth;
