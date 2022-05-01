@@ -3,23 +3,53 @@
     padding-top: 33px;
     padding-bottom: 28px;
     transition: all 0.2s;
+    @media screen and (max-width: 970px){
+        padding: 20px;
+    }
     &-container {
         max-width: 1150px;
         display: flex;
         justify-content: space-between;
         align-items: stretch;
         flex-wrap: wrap;
+        @media screen and (max-width: 970px){
+            flex-wrap: nowrap;
+        }
+
+        @media screen and (max-width: 560px){
+            flex-direction: column;
+        }
     }
 
     .logo-header {
         display: flex;
         align-items: center;
         flex-basis: 257px;
+
+        @media screen and (max-width: 970px){
+            flex-basis: auto;
+            display: none;
+        }
     }
 
     .nav-header {
         flex-basis: 409px;
         display: flex;
+        @media screen and (max-width: 970px){
+            flex-basis: 70%;
+        }
+
+        @media screen and (max-width: 560px){
+            font-size: calc($primalFontSize * 1.2);
+        }
+
+        @media screen and (max-width: 400px){
+            font-size: calc($primalFontSize / 1.1);
+        }
+
+        @media screen and (max-width: 280px){
+            font-size: calc($primalFontSize / 1.2);
+        }
         &__list {
             display: flex;
             justify-content: space-between;
@@ -41,7 +71,31 @@
         align-items: center;
         color: $primalSecondColor;
         background-color: $primalBTNcolor;
-        @include InterFontBold;;
+        @include InterFontBold;
+        
+        @media screen and (max-width: 970px){
+            flex-basis: 20%;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 760px){
+            font-size: calc($primalFontSize / 1.3);
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 560px){
+            margin-top: 20px;
+            font-size: $primalFontSize;
+        }
+
+        @media screen and (max-width: 400px){
+            font-size: calc($primalFontSize / 1.1);
+        }
+
+        @media screen and (max-width: 280px){
+            font-size: calc($primalFontSize / 1.5);
+            padding: 2px;
+        }
 
     }
 }
