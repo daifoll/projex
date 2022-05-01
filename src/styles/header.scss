@@ -43,7 +43,7 @@
         align-items: center;
         color: $primalSecondColor;
         background-color: $primalBTNcolor;
-        @include primalFontMediumBtn;
+        @include InterFontBold;;
 
         @media screen and (max-width: 992px) {
             display: none;

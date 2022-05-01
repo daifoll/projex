@@ -60,7 +60,7 @@
                 color: $primalSecondColor;
                 text-transform: none;
                 line-height: 30px;
-                @include primalFontSemiBold;
+                @include InterFontBold;
                 font-size: $connectionFormSubmitFontSize;
                 cursor: pointer;
             }
