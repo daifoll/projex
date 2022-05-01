@@ -2,6 +2,7 @@
     max-width: 100%;
     padding-top: 33px;
     padding-bottom: 28px;
+    transition: all 0.2s;
     &-container {
         max-width: 1150px;
         display: flex;
@@ -28,9 +29,6 @@
             @include primalFontMedium;
         }
 
-        @media screen and (max-width: 992px) {
-            display: none;
-        }
     }
     .nav-list__link:hover{
         color: #EC1C24;
@@ -45,8 +43,16 @@
         background-color: $primalBTNcolor;
         @include InterFontBold;;
 
-        @media screen and (max-width: 992px) {
-            display: none;
-        }
     }
+}
+
+.header-pseudo::after{
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: #EC1C24;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
