@@ -1,3 +1,4 @@
+import './scripts/scrollAnchors.js'
 import './scripts/clients-slider.js'
 import './scripts/totop-button.js'
 import './scripts/provide-slider.js'
