@@ -24,9 +24,11 @@
         padding-top: 36px;
 
         .clients-slider {
-            overflow: hidden;
-            // overflow-x: scroll;
+            overflow: scroll;
             max-width: 100%;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
             &__line {
                 display: flex;
                 justify-content: space-between;

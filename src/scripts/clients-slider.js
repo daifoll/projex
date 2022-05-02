@@ -1,11 +1,11 @@
+/* TOUCH SLIDER */
 "use strict"
-
+// Константы
 const slider = document.querySelector('.clients-slider');
 const sliderLine = document.querySelector('.clients-slider__line')
-
 let sliderGrab = false;
 
-// Событи
+// События
 slider.addEventListener('mousedown', (event)=>{
     sliderGrab = true;
     slider.style.cursor = 'grabbing'
@@ -27,4 +27,3 @@ slider.addEventListener('mousemove',(event)=>{
         slider.scrollLeft -= event.movementX
     }
 })
-
