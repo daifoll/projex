@@ -5,8 +5,6 @@
 let header = document.querySelector('.header');
 
 document.addEventListener('scroll', ()=>{
-    console.log(window.scrollY)
-
     if(window.scrollY > 120){
         header.style.position = 'fixed';
         header.style.zIndex = '9999';
