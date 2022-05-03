@@ -37,6 +37,12 @@
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
+/* INTER - LIGHT */
+
+@mixin InterFontLight {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
 
 /* КНОПКИ Galano Grotesque - MEDUIM */
 @mixin primalFontMediumBtn {

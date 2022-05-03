@@ -4,13 +4,23 @@ section.connection#getquote
             h3.connection__header Request A Quote
             .request__content
                 form.request__form.form-request(action="#")
-                    input.form-request__item(type="text" placeholder="Full name")
-                    input.form-request__item(type="text" placeholder="Mobile")
-                    input.form-request__item(type="text" placeholder="Email")
-                    select.form-request__item.form-request__select(name="request__select" placeholder="Service")
-                        option(value="service") service
-                    textarea.form-request__item.form-request__message(placeholder="Message")
-                    button.form-request__item.form-request__submit Submit
+                    .form-request__item-wrapper
+                        input.form-request__item.form-request__fullName(type="text" placeholder="Full name*")
+                        .request__validation
+                    .form-request__item-wrapper
+                        input.form-request__item.form-request__phone(type="text" placeholder="Mobile*")
+                        .request__validation
+                    .form-request__item-wrapper
+                        input.form-request__item.form-request__eMail(type="text" placeholder="Email*")
+                        .request__validation
+                    .form-request__item-wrapper
+                        select.form-request__item.form-request__select(name="request__select" placeholder="Service")
+                            option(value="service") service
+                            option(value="technical question") technical question
+                            option(value="business offer") business offer
+                    .form-request__item-wrapper
+                        textarea.form-request__item.form-request__message(placeholder="Message")
+                    button(type="submit").form-request__item.form-request__submit Submit
         .connection__column.promises  
             h3.connection__header Our Promises
             .promises__accordion.accordion-promises

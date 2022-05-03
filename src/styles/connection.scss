@@ -30,21 +30,33 @@
                 }
         }   
         .form-request{
+            
             &__item{
                 padding: 19px 0 19px 13px;
                 border: 1px solid $connectionBorderColor;
-                text-transform: uppercase;
-                @include primalFontLight;
-                
-                
+                flex-grow: 1;
+                &::placeholder{
+                    @include primalFontLight;
+                    text-transform: uppercase;
+                }
+            }
+
+            &__item-wrapper{
+                max-width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                @include InterFontLight;
                 &:not(:last-child){
-                    margin-bottom: 24px;
+                    margin-bottom: 30px;
                 }
             }
             
             &__select{
                 appearance: none;
                 background: url('../images/connection/selector-vector.svg') no-repeat center right 30px;        
+                text-transform: uppercase;
+                color: rgb(181, 177, 177);
             }
 
             &__message{
@@ -130,4 +142,25 @@
                 }
             }
     }
+}
+
+// Стили ошибок формы
+
+.error{
+    position: absolute;
+    bottom: -18px;
+    left: 5px;
+    color: red;
+    @include primalFontLight;
+}
+
+.request__validation{
+    position: absolute;
+}
+
+.success{
+    border: 1px solid green !important;
+}
+.failure{
+    border: 1px solid red !important;
 }

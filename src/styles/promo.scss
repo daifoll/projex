@@ -108,4 +108,23 @@
         @include InterFontBold;
         font-size: 18px;
     }
+
 }
+
+// .promoModalWindow{
+//     position: absolute;
+//     top: 10%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     z-index: 999;
+//     width: 600px;
+//     height: 300px;
+//     background: white;
+//     &__active{
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         background: gray;
+//         z-index: 10000;
+//     }
+// }
