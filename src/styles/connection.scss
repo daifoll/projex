@@ -38,9 +38,13 @@
                 @include InterFontRegular;
                 font-size: calc($connectionFormItemFontSize * 1.1);
                 color: black;
+                transition: all .5s;
                 &::placeholder{
                     @include primalFontLight;
                     text-transform: uppercase;
+                }
+                &:focus{
+                    outline: none;
                 }
             }
 
@@ -114,7 +118,7 @@
                         margin-top: 23px;
                         max-width: 486px;
                         line-height: 25px;
-                        display: none;
+                        display: block;
                         transition: opacity 0.3s;
                             &_active{
                                 display: block;

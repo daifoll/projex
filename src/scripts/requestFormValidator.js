@@ -4,6 +4,7 @@
 
 /* КОНСТАНТЫ */
 const form = document.querySelector('.form-request');
+const inputItems = form.querySelectorAll('input');
 const itemWrapper = document.querySelector('.form-request__item-wrapper');
 const fullName = document.querySelector('.form-request__fullName');
 const phone = document.querySelector('.form-request__phone');
@@ -11,18 +12,30 @@ const eMail = document.querySelector('.form-request__eMail');
 const select = document.querySelector('.form-request__select');
 const message = document.querySelector('.form-request__item.form-request__message');
 const submit = document.querySelector('.form-request__submit');
+let status;
 
 
 
 /* СОБЫТИЯ */
 form.addEventListener('submit', event => {
     event.preventDefault();
-    validateInputs()
+    
+    validateInputs();
 
+    if(status){
+        console.log('Форма отправлена!')
+    }
 });
 
+// Проверяем на валидность инпуты после каждого изменения
+inputItems.forEach((item)=>{
+    item.addEventListener('input', ()=>{
+        validateInputs()
+    })
+})
 
-//Запрещаем вводить символы в phone input
+
+// Запрещаем вводить символы в phone input
 phone.addEventListener('input', function(){
     let reg = /[A-Za-zА-Яа-я_=!"@№#;$%:^?&*=.,/|]/g
     this.value = this.value.replace(reg, '')
@@ -81,6 +94,8 @@ function setError(element, message){
     error.classList.add('error');
     element.classList.add('failure')
     element.classList.remove('success')
+
+    status = false;
 }
 
 function unsetError(element){
@@ -91,6 +106,8 @@ function unsetError(element){
     error.classList.remove('error');
     element.classList.remove('failure')
     element.classList.add('success')
+
+    status = true;
 }
 
 // Валидация почты
