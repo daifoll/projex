@@ -17,7 +17,6 @@ const submit = document.querySelector('.form-request__submit');
 /* СОБЫТИЯ */
 form.addEventListener('submit', event => {
     event.preventDefault();
-
     validateInputs()
 
 });

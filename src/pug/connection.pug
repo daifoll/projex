@@ -5,13 +5,13 @@ section.connection#getquote
             .request__content
                 form.request__form.form-request(action="#")
                     .form-request__item-wrapper
-                        input.form-request__item.form-request__fullName(type="text" placeholder="Full name*")
+                        input.form-request__item.form-request__fullName(type="text" placeholder="Full name *" maxlength="60")
                         .request__validation
                     .form-request__item-wrapper
-                        input.form-request__item.form-request__phone(type="text" placeholder="Mobile*")
+                        input.form-request__item.form-request__phone(type="text" placeholder="Mobile *" maxlength="20")
                         .request__validation
                     .form-request__item-wrapper
-                        input.form-request__item.form-request__eMail(type="text" placeholder="Email*")
+                        input.form-request__item.form-request__eMail(type="text" placeholder="Email *" maxlength="30")
                         .request__validation
                     .form-request__item-wrapper
                         select.form-request__item.form-request__select(name="request__select" placeholder="Service")

@@ -35,6 +35,9 @@
                 padding: 19px 0 19px 13px;
                 border: 1px solid $connectionBorderColor;
                 flex-grow: 1;
+                @include InterFontRegular;
+                font-size: calc($connectionFormItemFontSize * 1.1);
+                color: black;
                 &::placeholder{
                     @include primalFontLight;
                     text-transform: uppercase;
@@ -46,7 +49,6 @@
                 position: relative;
                 display: flex;
                 justify-content: flex-start;
-                @include InterFontLight;
                 &:not(:last-child){
                     margin-bottom: 30px;
                 }
@@ -56,7 +58,8 @@
                 appearance: none;
                 background: url('../images/connection/selector-vector.svg') no-repeat center right 30px;        
                 text-transform: uppercase;
-                color: rgb(181, 177, 177);
+                color: rgb(137, 133, 133);
+                @include primalFontLight;
             }
 
             &__message{
@@ -72,7 +75,7 @@
                 color: $primalSecondColor;
                 text-transform: none;
                 line-height: 30px;
-                @include InterFontBold;
+                // @include InterFontBold;
                 font-size: $connectionFormSubmitFontSize;
                 cursor: pointer;
             }
