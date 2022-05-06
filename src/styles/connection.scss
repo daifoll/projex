@@ -38,7 +38,7 @@
                 @include InterFontRegular;
                 font-size: calc($connectionFormItemFontSize * 1.1);
                 color: black;
-                transition: all .5s;
+                // transition: all .5s;
                 &::placeholder{
                     @include primalFontLight;
                     text-transform: uppercase;
@@ -104,48 +104,49 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    
+                    cursor: pointer;
+
+                    &::before{
+                        content: '';
+                        width: 33px;
+                        height: 33px;
+                        background: url('../images/connection/plus-accordion.svg') no-repeat;                     right: 0;
+                        background-position: center center;
+                        right: 27px;
+                        top: 23px;
+                        position: absolute;
+                    }
+
                     &:not(:first-child){
                         margin-top: 32px;
                     }
+                    
                     padding: 30px 0 30px 24px;
                     border: 1px solid $connectionBorderColor;
+                    
                     &__header{
                         @include primalFontSemiBold;
                         font-size: $connectionPromisesHeaderFontSize;
+                            &::selection{
+                                user-select: none;
+                            }
+                    }
+
+                    &__content{
+                        max-height: 0;
+                        overflow: hidden;
+                        // overflow-y: auto;
+                        cursor: auto;
+                        transition: 0.3s;
+                        
                     }
                     &__text{
                         margin-top: 23px;
                         max-width: 486px;
                         line-height: 25px;
                         display: block;
-                        transition: opacity 0.3s;
-                            &_active{
-                                display: block;
-                                
-                            }
                     }
 
-                    &__btn {
-                        position: absolute;
-                        display: flex;
-                        justify-content: center;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 27px;
-                        width: 34px;
-                        height: 34px;
-                        border: 1px solid black;
-                        border-radius: 50%;
-                        cursor: pointer;
-                        @include primalFontSemiBold;
-                        font-size: 20px;
-                        text-align: center;
-                        background: transparent;
-                            &_active{
-                                top: 40px;
-                            }
-                    }
                 }
             }
     }
@@ -170,4 +171,27 @@
 }
 .failure{
     border: 1px solid red !important;
+}
+
+// Стили состояний аккордиона
+
+.accordion-active{
+    &::before{
+        content: none!important;
+    }
+
+    &::after{
+        content: '';
+        width: 33px;
+        height: 33px;
+        background: url('../images/connection/minus-accordion.svg') no-repeat;                     right: 0;
+        background-position: center center;
+        right: 27px;
+        top: 23px;
+        transform: translateY(0%);
+        position: absolute;       
+    }
+}
+.accordion-active .item-accordion__content{
+    max-height: 500px !important;
 }
