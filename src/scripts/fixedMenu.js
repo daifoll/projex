@@ -7,7 +7,7 @@ let header = document.querySelector('.header');
 document.addEventListener('scroll', ()=>{
     if(window.scrollY > 120){
         header.style.position = 'fixed';
-        header.style.zIndex = '9999';
+        header.style.zIndex = '9997';
         header.style.width = '100%';
         header.style.background = 'white';
         header.classList.add('header-pseudo');

@@ -12,7 +12,11 @@ const eMail = document.querySelector('.form-request__eMail');
 const select = document.querySelector('.form-request__select');
 const message = document.querySelector('.form-request__item.form-request__message');
 const submit = document.querySelector('.form-request__submit');
-let status;
+
+/* ПЕРЕМЕННЫЕ */
+let fullNameStatus = false;
+let emailStatus = false;
+let phoneSatus = false;
 
 
 
@@ -22,15 +26,15 @@ form.addEventListener('submit', event => {
     
     validateInputs();
 
-    if(status){
-        console.log('Форма отправлена!')
+    if(fullNameStatus && emailStatus && phoneSatus){
+        createModalWindow()  
     }
 });
 
 // Проверяем на валидность инпуты после каждого изменения
 inputItems.forEach((item)=>{
     item.addEventListener('input', ()=>{
-        validateInputs()
+        validateInputs();
     })
 })
 
@@ -45,10 +49,35 @@ phone.addEventListener('input', function(){
 
 
 
-
-
-
 /* ФУНКЦИИ */
+
+// Функция создания модального окна
+
+function createModalWindow(){
+    let connection = document.querySelector('.connection');
+        
+    if(document.querySelector('.connection__modalWindow')) return
+    
+    let connectionModalWindow = document.createElement('div');
+    connectionModalWindow.classList.add('connection__modalWindow');
+    connectionModalWindow.innerText = 'Your request has been successfully sent!'
+    
+    let connectionModalWindowBtn = document.createElement('button');
+    connectionModalWindowBtn.classList.add('connection__modalWindowBtn');
+    connectionModalWindowBtn.innerText = 'X'
+    
+    connectionModalWindowBtn.addEventListener('click', ()=>{
+        connectionModalWindow.remove()
+        document.body.classList.remove('modalWindowBlackout');
+    })
+
+    connectionModalWindow.append(connectionModalWindowBtn)
+    
+    document.body.classList.add('modalWindowBlackout');
+    connection.append(connectionModalWindow);
+
+}
+
 
 // Функция валидации инпутов
 function validateInputs(){
@@ -61,26 +90,34 @@ function validateInputs(){
     // Проверка на валидность fullName
     if(fullNameValue === ''){
         setError(fullName, 'Required field!')
+        fullNameStatus = false;
     }else{
         unsetError(fullName)
+        fullNameStatus = true;
     }
     
     // Проверка на валидность eMail
     if(eMailValue === ''){
         setError(eMail, 'Required field!')
+        emailStatus = false;
     }else if(!isValidEmail(eMailValue)){
         setError(eMail, 'Invalid email!')
+        emailStatus = false;
     }else{
         unsetError(eMail)
+        emailStatus = true;
     }
 
     // Проверка на валидность phone
     if(phoneValue === ''){
         setError(phone, 'Required field!')
+        phoneSatus = false
     }else if(!isValidPhone(phoneValue)){
         setError(phone, 'Invalid phone number!')
+        phoneSatus = false
     }else{
         unsetError(phone)
+        phoneSatus = true;
     }
 }
 
@@ -94,8 +131,6 @@ function setError(element, message){
     error.classList.add('error');
     element.classList.add('failure')
     element.classList.remove('success')
-
-    status = false;
 }
 
 function unsetError(element){
@@ -106,14 +141,11 @@ function unsetError(element){
     error.classList.remove('error');
     element.classList.remove('failure')
     element.classList.add('success')
-
-    status = true;
 }
 
 // Валидация почты
 function isValidEmail(email){
     const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
     return re.test(String(email).toLowerCase());
 }
 
