@@ -1,18 +1,21 @@
-/* СКРИПТ СПОЙЛЕРОВ */
+/* СКРИПТ АККОРДИОНА */
 'use strict'
 
+
+// КОНСТАНТЫ
 const accordion = document.querySelector('.accordion-promises');
 const accordionItems = document.querySelectorAll('.item-accordion');
 
+
+// СОБЫТИЯ
 for(let i = 0; i < accordionItems.length; i++){
-    accordionItems[i].addEventListener('click', openAccodrion)
+    accordionItems[i].addEventListener('click', openAccordion)
 }
 
 
-
-function openAccodrion(){
-    if(this.classList.contains('item-accordion__content')) return
-    
+// ФУНКЦИИ
+function openAccordion(event){
+    if(event.target.classList.contains('item-accordion__text')) return
  
     this.classList.toggle('accordion-active');
 
