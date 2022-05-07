@@ -4,7 +4,15 @@
     padding-bottom: 72px;
     background: $primalSecondBGColor;
     color: $primalSecondColor;
+    @media screen and (device-width: 1180px) {
+        height: 95vh;
+        min-height: -webkit-fill-available;
+    }
 
+    @media screen and (device-width: 912px) {
+        height: 77vh;
+        min-height: -webkit-fill-available;
+    }
     &-container {
         display: flex;
         flex-wrap: wrap;
