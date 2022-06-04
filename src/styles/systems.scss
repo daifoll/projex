@@ -37,19 +37,15 @@
             @include primalFontSemiBold;
             font-size: $systemsHeaderFontSize;
             line-height: 56px;
-
+            text-align: center;
             @media screen and (max-width: 768px){
                 display: flex;
                 justify-content: center;
-            }
-            
-            @media screen and (max-width: 940px){
-                font-size: 30px;
-            }
-
-            @media screen and (max-width: 768px){
                 font-size: 29px;
                 width: 100%;
+            }
+            @media screen and (max-width: 560px) {
+                font-size: calc($systemsHeaderFontSize / 1.3);
                 
             }
             

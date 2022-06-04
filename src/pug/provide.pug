@@ -3,21 +3,51 @@ section.provide#services
         .prodive__column.provide-header
             span.provide-header__item Industrial Services 
         .prodive__column.provide-slider
-            .provide-slider__line
-                .provide-slider__content.slider-provide
-                    p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
-                    p.slider-provide__header Engineering
-                .provide-slider__content.slider-provide
-                    p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
-                    p.slider-provide__header Slide 2
-                .provide-slider__content.slider-provide
-                    p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
-                    p.slider-provide__header Slide 3
-                .provide-slider__content.slider-provide
-                    p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
-                    p.slider-provide__header Slide 4
-            button.slider-provide__btn.provide-btn
-                span.provide-btn__item 
+            //- .provide-slider__line
+            //-     .provide-slider__content.slider-provide
+            //-         p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+            //-         p.slider-provide__header Engineering
+            //-     .provide-slider__content.slider-provide
+            //-         p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+            //-         p.slider-provide__header Slide 2
+            //-     .provide-slider__content.slider-provide
+            //-         p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+            //-         p.slider-provide__header Slide 3
+            //-     .provide-slider__content.slider-provide
+            //-         p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+            //-         p.slider-provide__header Slide 4
+            //- button.slider-provide__btn.provide-btn
+            //-     span.provide-btn__item
+            <!-- Разметка слайдера (html код) -->
+                    <div class="itcss slider-provide">
+                    <div class="itcss__wrapper">
+                        <div class="itcss__items">
+                        <div class="itcss__item provide-slider__line">
+                            <!-- Контент 1 слайда -->
+                             p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+                             p.slider-provide__header Engineering
+                        </div>
+                        <div class="itcss__item provide-slider__line">
+                            <!-- Контент 2 слайда -->
+                            p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+                            p.slider-provide__header Slide 2
+                        </div>
+                        <div class="itcss__item provide-slider__line">
+                            <!-- Контент 3 слайда -->
+                            p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+                            p.slider-provide__header Slide 3
+                        </div>
+                        <div class="itcss__item provide-slider__line">
+                            <!-- Контент 4 слайда -->
+                            p.slider-provide__description Projex-Tec has a highly qualified technical team to manage the requirements and performance of design sub-contractors including any specialized services. 
+                            p.slider-provide__header Slide 4
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Стрелки для перехода к предыдущему и следующему слайду -->
+                        //- <a class="itcss__control itcss__control_prev" role="button" data-slide="prev"></a>
+                        <a class="itcss__control itcss__control_next slider-provide__btn" role="button" data-slide="next"></a>
+                    </div> 
         .prodive__column.provide-description
             .provide-description__item.description-provide
                 p.description-provide__header Mission
@@ -31,3 +61,6 @@ section.provide#services
                 p.description-provide__header Culture
                 p.description-provide__depiction Our work culture is embodied in several principles and values that guide every Projex-Tec employee in delivering our vision.
                 a(href="#projects" target="_blank").description-provide__link view more 
+
+<!-- Подключаем библиотеку слайдера -->
+script(src="./scripts/simple-adaptive-slider.js")

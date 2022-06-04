@@ -14,6 +14,9 @@
                 @include primalFontSemiBold;
                 font-size: $foundersHeaderFontSize;
                 line-height: 65px;
+                @media screen and (max-width: 560px) {
+                    font-size: calc($foundersHeaderFontSize / 1.3)
+                }
             }
         }
 
@@ -62,6 +65,9 @@
                                 font-size: $foundersCardNameFontSize;
                                 line-height: 38px;
                                 margin-top: 189px;
+                                @media screen and (max-width: 320px) {
+                                    font-size: calc($foundersCardNameFontSize / 1.3);
+                                }
                             }
 
                             &__description{
@@ -87,6 +93,9 @@
                                 flex-basis: 100%;
                                 @include InterFontBold;
                                 font-size: $foudersCardButtonsFontSize;
+                                @media screen and (max-width: 320px) {
+                                    font-size: calc($foudersCardButtonsFontSize / 1.3)
+                                }
                             }
 
                             &__contact{

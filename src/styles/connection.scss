@@ -17,6 +17,10 @@
         font-size: $connectionCardHeaderFontSize;
         text-align: center;
         line-height: 65px;
+
+        @media screen and (max-width: 560px) {
+            font-size: calc($connectionCardHeaderFontSize / 1.3)
+        }
     }
 
     .request {
@@ -206,7 +210,7 @@
 }
 
 .modalWindowBlackout{
-    overflow: hidden;
+    // overflow: hidden;
     &::after{
         content: '';
         position: absolute;
@@ -244,7 +248,7 @@
         content: '';
         width: 33px;
         height: 33px;
-        background: url('../images/connection/minus-accordion.svg') no-repeat;                     right: 0;
+        background: url('../images/connection/minus-accordion.svg') no-repeat;
         background-position: center center;
         right: 27px;
         top: 23px;

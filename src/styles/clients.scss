@@ -17,6 +17,10 @@
         &__text {
             @include primalFontSemiBold;
             font-size: $clientsHeaderFontSize;
+            
+            @media screen and (max-width: 560px) {
+                font-size: calc($clientsHeaderFontSize / 1.3)
+            }
         }
     }
 
