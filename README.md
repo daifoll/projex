@@ -1,5 +1,6 @@
 <h1>«Projex»</h1>
-<img src = "https://user-images.githubusercontent.com/54538084/172047019-690f29c4-869a-4ba9-ac71-2803f8c5cdc7.png">
+<img src = "https://user-images.githubusercontent.com/54538084/172047245-6ba95ec0-48f0-467a-b390-ccc02f6553c5.png">
+
 <ul>
   <br>
  <h3>Используемые технологии:</h3>
@@ -20,4 +21,4 @@
 </ul>
 <br>
 
-<a href = "[https://daifoll.github.io/ToDoList/](https://daifoll.github.io/projex/)" target = "_blank">ОТКРЫТЬ ПРОЕКТ</a>
+<a href = "https://daifoll.github.io/projex/" target = "_blank">ОТКРЫТЬ ПРОЕКТ</a>
