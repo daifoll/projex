@@ -3,12 +3,12 @@
 
 <ul>
   <br>
- <h3>Используемые технологии:</h3>
-  <li>HTML5</li>
-  <li>CCS3</li>
-  <li>JS6</li>
-  <li>WEBPACK5</li>
-  <li>NODE JS</li>
+ <h3>Стек:</h3>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JS</li>
+  <li>Webpack</li>
+  <li>Node.js (работа с пакетами)</li>
   <br>
   <h3>Что реализовано:</h3>
   <li>Адаптивная верстка по макету из Figma</li>
