@@ -6,7 +6,7 @@
  <h3>Стек:</h3>
   <li>HTML</li>
   <li>CSS</li>
-  <li>JS</li>
+  <li>JavaScript</li>
   <li>Webpack</li>
   <li>Node.js (работа с пакетами)</li>
   <br>
